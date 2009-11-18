@@ -1,0 +1,52 @@
+libelf
+------------------------------------------
+libelf is a free ELF object file access library that is compatible with 
+the commercial (SVR4, Solaris) versions.
+
+Runtime requirements:
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libintl8-0.17-11
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  gettext-devel-0.17-11
+  make-3.81-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.mr511.de/software/
+
+Canonical download:
+  http://www.mr511.de/software/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libelf-0.8.13-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libelf-0.8.13-X.cygport all
+
+This will create:
+  /usr/src/libelf-0.8.13-X-src.tar.bz2
+  /usr/src/libelf-devel-0.8.13-X.tar.bz2
+  /usr/src/libelf0-0.8.13-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.8.13-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

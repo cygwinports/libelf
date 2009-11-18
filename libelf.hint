@@ -1,0 +1,4 @@
+category: Libs
+sdesc: "ELF object file access library (sources)"
+ldesc: "libelf is a free ELF object file access library that is 
+compatible with the commercial (SVR4, Solaris) versions."

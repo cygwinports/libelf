@@ -1,0 +1,6 @@
+category: Libs
+requires: libelf0
+external-source: libelf
+sdesc: "ELF object file access library (development)"
+ldesc: "libelf is a free ELF object file access library that is 
+compatible with the commercial (SVR4, Solaris) versions."

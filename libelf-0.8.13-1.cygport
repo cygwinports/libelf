@@ -1,0 +1,27 @@
+DESCRIPTION="ELF object file access library"
+HOMEPAGE="http://www.mr511.de/software/"
+SRC_URI="http://www.mr511.de/software/${P}.tar.gz"
+
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel"
+libelf0_CONTENTS="usr/bin/cygelf-0.dll usr/share/"
+libelf_devel_CONTENTS="usr/include/ usr/lib/"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf --enable-compat LIBS=-lintl
+	cygmake \
+		DO_SHLIB='yes' PICFLAGS='-DPIC' DEPSHLIBS='$(LIBS)' \
+		LINK_SHLIB='$(CC) -shared -Wl,--out-implib,libelf.dll.a' \
+		SHLIB='cygelf-$(MAJOR).dll' SHLINK='$(SHLIB)' SONAME='$(SHLIB)'
+}
+
+USE_DESTDIR=0
+
+src_install() {
+	cd ${B}
+	cyginstall
+	dobin lib/*.dll
+	dolib lib/*.dll.a
+}
