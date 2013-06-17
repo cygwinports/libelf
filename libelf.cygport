@@ -1,8 +1,14 @@
-DESCRIPTION="ELF object file access library"
+NAME="libelf"
+VERSION=0.8.13
+RELEASE=3
+CATEGORY="Libs"
+SUMMARY="ELF object file access library"
+DESCRIPTION="libelf is a free ELF object file access library that is compatible
+with the commercial (SVR4, Solaris) versions."
 HOMEPAGE="http://www.mr511.de/software/"
-SRC_URI="http://www.mr511.de/software/${P}.tar.gz"
+SRC_URI="http://www.mr511.de/software/libelf-${VERSION}.tar.gz"
 
-PKG_NAMES="${PN} ${PN}0 ${PN}-devel"
+PKG_NAMES="${NAME}0 ${NAME}-devel"
 libelf0_CONTENTS="usr/bin/cygelf-0.dll usr/share/"
 libelf_devel_CONTENTS="usr/include/ usr/lib/"
 

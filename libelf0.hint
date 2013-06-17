@@ -1,6 +1,0 @@
-category: Libs
-requires: libgcc1 libintl8
-external-source: libelf
-sdesc: "ELF object file access library (runtime)"
-ldesc: "libelf is a free ELF object file access library that is 
-compatible with the commercial (SVR4, Solaris) versions."
